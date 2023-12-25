@@ -295,7 +295,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
-  defaults = {
+  extensions = {
+      -- Add luasnup theme extensions - shows preview
+      luasnip = require("telescope.themes").get_dropdown({
+      preview  = {
+        check_mime_type  = true
+      },
+    })
+  },
+
+    defaults = {
     mappings = {
       i = {
         ['<C-u>'] = false,
