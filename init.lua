@@ -643,6 +643,7 @@ harpoon:setup()
 -- REQUIRED
 
 vim.keymap.set("n", "<leader>1", function() harpoon:list():append() end, { desc = "Append current file to list" } )
+vim.keymap.set("n", "<leader>3", function() harpoon:list():removeAt(harpoon:list()._index) end, { desc = "Remove current file in list" } )
 vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<C-j>", function() harpoon:list():select(2) end)
