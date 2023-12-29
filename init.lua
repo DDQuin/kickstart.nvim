@@ -572,7 +572,6 @@ local mason_lspconfig = require 'mason-lspconfig'
 
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
- -- ensure_installed = {"gopls"},
 }
 
 mason_lspconfig.setup_handlers {
