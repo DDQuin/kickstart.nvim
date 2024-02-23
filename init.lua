@@ -154,7 +154,8 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      --vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'rose-pine'
     end,
   },
 
@@ -166,6 +167,7 @@ require('lazy').setup({
       options = {
         icons_enabled = false,
         theme = 'onedark',
+        theme = 'rose-pine',
         component_separators = '|',
         section_separators = '',
       },
@@ -219,7 +221,7 @@ require('lazy').setup({
     "benfowler/telescope-luasnip.nvim",
     module = "telescope._extensions.luasnip",  -- if you wish to lazy-load
   },
-
+  --{ "rose-pine/neovim", name = "rose-pine" },
    { import = 'custom.plugins' },
 }, {})
 
